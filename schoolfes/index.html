@@ -4,7 +4,7 @@
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin: 0px; overflow: hidden">
-    <p>version 3.2</p>
+    <p>version 3.3</p>
     <a-scene embedded arjs vr-mode-ui="enabled: false">
       <a-assets>
         <a-asset-item id="model" src="./assets/schoolfes.glb"></a-asset-item>
@@ -12,7 +12,7 @@
       <!-- マーカーの.pattファイルを読み込む  -->
       <a-marker type="pattern" url="assets/pattern-marker.patt">
         <!-- 3Dモデルを呼び出す -->
-        <a-entity gltf-model="#model" rotation="90 0 -90"></a-entity>
+        <a-entity gltf-model="#model" rotation="90 90 0"></a-entity>
       </a-marker>    
       <!-- カメラを追加 -->
       <a-entity camera></a-entity>
