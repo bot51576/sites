@@ -14,7 +14,9 @@ function selectTab(elementNum) {
 async function changeTabs(elementNum) {
   const views = [
     { path: "home", view: new home() },
-    // { path: "play", view: new play() },
+    { path: "home", view: new home() },
+    { path: "home", view: new home() },
+    { path: "home", view: new home() },
   ];
   app.innerHTML = await views[elementNum].view.getHtml();
   await selectTab(elementNum);
