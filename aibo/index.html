@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <nav
+      class="justify-between w-full h-screen wrapper block fixed inset-x-0 bottom-0 z-10"
+    >
+      <div
+        class="fixed bottom-0 flex justify-center w-full transition-shadow bg-white border md:px-10 hover:shadow-xl"
+      >
+        <div
+          onclick="changeTabs(0)"
+          class="tabs text-gray-700 text-blue-500 mx-5 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+        >
+          <a href="#home" class="flex flex-col py-2 md:w-20">
+            <div class="text-2xl flex justify-center">
+              <ion-icon name="home-outline"></ion-icon>
+            </div>
+            <span
+              class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+              >Home</span
+            >
+          </a>
+        </div>
+
+        <div
+          onclick="changeTabs(1)"
+          class="tabs text-gray-700 mx-5 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+        >
+          <a href="#play" class="flex flex-col py-2 md:w-20">
+            <div class="text-2xl flex justify-center">
+              <ion-icon name="play-outline"></ion-icon>
+            </div>
+            <span
+              class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+              >Play</span
+            >
+          </a>
+        </div>
+
+        <div
+          onclick="changeTabs(2)"
+          class="tabs text-gray-700 mx-3 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+        >
+          <a href="#connect" class="flex flex-col py-2 md:w-20">
+            <div class="text-2xl flex justify-center">
+              <ion-icon name="finger-print-outline"></ion-icon>
+            </div>
+            <span
+              class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+              >Connect</span
+            >
+          </a>
+        </div>
+
+        <div
+          onclick="changeTabs(3)"
+          class="tabs text-gray-700 mx-3 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+        >
+          <a href="#settings" class="flex flex-col py-2 md:w-20">
+            <div class="text-2xl flex justify-center">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+            <span
+              class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+              >Settings</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
