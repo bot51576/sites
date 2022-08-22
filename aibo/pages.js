@@ -27,11 +27,10 @@ class Home extends ViewTemp {
   async getSummry()  {
     return /*html*/ `
     <div class=""></div>
-    <div class="flex text-2xl -mt-60
-                font-extrabold relative justify-between 
+    <div class="flex text-2xl bottom-60 notifi
+                font-extrabold absolute justify-between 
                 flex justify-center items-center">
-        <p class="">
-          <ion-icon class="text-blue-500"
+          <ion-icon class="text-blue-500 inline-block align-middle"
           name="notifications-outline"></ion-icon>
           通知
         </p>
@@ -46,8 +45,8 @@ class Home extends ViewTemp {
     this.setState("Home", 0);
     if (this.turn === true) {
       return /*html*/ `
-            <div class="flex justify-center cursor-pointer	">
-              <div class="mt-16 flex justify-center">
+            <div class="flex justify-center cursor-pointer">
+              <div class="mt-16 flex justify-center  mx-10">
                 <div onclick="views[0].view.turn = false;router()" class="monitor_t 
                   w-40 h-40
                   sm:w-60 sm:h-60
