@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./my.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 bg-cyan-500 mx-auto"
+      >
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        >
+          <a href="/" class="flex items-center">
+            <img src="./img/kousyou.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
+            <span
+              class="text-gray-700 self-center text-xl font-semibold whitespace-nowrap"
+              >見守り aibo</span
+            >
+          </a>
+          <div class="text-gray-700 flex items-center lg:order-2">
+            <a
+              href="#"
+              class="mt-1 px-1.5 py-0.5 rounded-full hover:bg-cyan-400 font-medium text-2xl"
+              ><ion-icon name="notifications-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="justify-between justify-center mx-auto"
+      id="app"
+    ></div>
+    <footer>
+      <nav
+        class="justify-between w-full h-auto wrapper block fixed bottom-0 z-10"
+      >
+        <div
+          class="fixed bottom-0 flex justify-center w-full transition-shadow bg-white border md:px-10 hover:shadow-xl"
+        >
+          <div
+            class="tabs text-gray-700 text-blue-500 mx-5 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+          >
+            <a href="#" class="flex flex-col py-2 md:w-20" data-link>
+              <div class="text-2xl flex justify-center">
+                <ion-icon name="home-outline"></ion-icon>
+              </div>
+              <span
+                class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+                >Home</span
+              >
+            </a>
+          </div>
+
+          <div
+            class="tabs text-gray-700 mx-5 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+          >
+            <a href="#play" class="flex flex-col py-2 md:w-20" data-link>
+              <div class="text-2xl flex justify-center">
+                <ion-icon name="play-outline"></ion-icon>
+              </div>
+              <span
+                class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+                >Play</span
+              >
+            </a>
+          </div>
+
+          <div
+            class="tabs text-gray-700 mx-3 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+          >
+            <a href="#connect" class="flex flex-col py-2 md:w-20" data-link>
+              <div class="text-2xl flex justify-center">
+                <ion-icon name="finger-print-outline"></ion-icon>
+              </div>
+              <span
+                class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+                >Connect</span
+              >
+            </a>
+          </div>
+
+          <div
+            class="tabs text-gray-700 mx-3 px-3 cursor-pointer md:px-6 hover:bg-gray-100"
+          >
+            <a href="#settings" class="flex flex-col py-2 md:w-20" data-link>
+              <div class="text-2xl flex justify-center">
+                <ion-icon name="settings-outline"></ion-icon>
+              </div>
+              <span
+                class="mt-1 text-xs font-semibold tracking-wide text-center capitalize anti-xsaliased text md:text-sm sm:subpixel-antialiased"
+                >Settings</span
+              >
+            </a>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./pages.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
