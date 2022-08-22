@@ -1,0 +1,12 @@
+.monitor_t {
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #7facde, -10px -10px 20px #add3e1;
+}
+
+.monitor_f {
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+
