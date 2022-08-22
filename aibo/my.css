@@ -1,3 +1,4 @@
+
 .monitor_t {
   border-radius: 50%;
   background: #e0e0e0;
@@ -12,6 +13,17 @@
 
 @media (min-height: 680px) {
   .notifi {
-    bottom: 20rem;
+    bottom: 25rem;
+  }
+}
+@media (min-height: 850px) {
+  .notifi {
+    bottom: 30rem;
+  }
+}
+
+@media (min-width: 413px) {
+  .arrow {
+    margin-left: 18rem;
   }
 }
