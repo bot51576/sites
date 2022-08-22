@@ -26,18 +26,22 @@ class Home extends ViewTemp {
 
   async getSummry()  {
     return /*html*/ `
-    <div class=""></div>
-    <div class="flex text-2xl bottom-60 notifi
-                font-extrabold absolute justify-between 
-                flex justify-center items-center">
-          <ion-icon class="text-blue-500 inline-block align-middle"
-          name="notifications-outline"></ion-icon>
-          通知
-        </p>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-    </div>
-      <div class="justify-center flex items-center">
+    <div class="">
+      <div class="flex text-2xl bottom-60 notifi
+                  font-extrabold absolute justify-between 
+                  flex justify-center items-center">
+            <ion-icon class="pl-1 text-blue-500 inline-block align-middle"
+            name="notifications-outline"></ion-icon>
+            <p class="whitespace-nowrap">通知</p>
+          <ion-icon class="arrow ml-64 mr-2" name="chevron-forward-outline"></ion-icon>
       </div>
+      <div class="bottom-60 justify-center items-center content-center">
+        <div>通知内容</div>
+        <div>通知内容</div>
+        <div>通知内容</div>
+        <div>通知内容</div>
+      </div>
+    </div>
     `
   }
 
@@ -48,12 +52,12 @@ class Home extends ViewTemp {
             <div class="flex justify-center cursor-pointer">
               <div class="mt-16 flex justify-center  mx-10">
                 <div onclick="views[0].view.turn = false;router()" class="monitor_t 
-                  w-40 h-40
+                  w-40 h-40 sm:-ml-20
                   sm:w-60 sm:h-60
                   flex flex-col justify-center items-center"
                 >見守り中</div>
                 <div class="w-40 h-40
-                  sm:w-60 sm:h-60
+                  sm:w-60 sm:h-60 sm:-mr-20
                   flex flex-col items-center content-center">
                   <img src="./img/aibo.png" />
                 </div>    
