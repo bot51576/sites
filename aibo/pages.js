@@ -27,19 +27,21 @@ class Home extends ViewTemp {
   async getSummry()  {
     return /*html*/ `
     <div class="">
-      <div class="flex text-2xl bottom-60 notifi
-                  font-extrabold absolute justify-between 
-                  flex justify-center items-center">
-            <ion-icon class="pl-1 text-blue-500 inline-block align-middle"
-            name="notifications-outline"></ion-icon>
-            <p class="whitespace-nowrap">通知</p>
-          <ion-icon class="arrow ml-64 mr-2" name="chevron-forward-outline"></ion-icon>
+      <div class="flex text-2xl notifi mt-16
+                  font-extrabol justify-between 
+                 justify-center items-center">
+            <div class="">
+              <ion-icon class="text-blue-500 inline-block align-middle -mt-1 ml-2"
+              name="notifications-outline"></ion-icon>
+            </div>
+            <p href="#notifi" class="whitespace-nowrap -ml-3">通知</p>
+          <a href="#notifi"><ion-icon class="arrow ml-64 mr-4" name="chevron-forward-outline"></ion-icon></a>
       </div>
-      <div class="bottom-60 justify-center items-center content-center">
-        <div>通知内容</div>
-        <div>通知内容</div>
-        <div>通知内容</div>
-        <div>通知内容</div>
+      <div class="flex justify-center items-center w-full mx-auto mt-12">
+        <div class="flex justify-between rounded-lg bg-blue-200"> 
+          <div class="p-3">通知内容</div>
+          <div class="ml-64">見る</div>
+        </div>
       </div>
     </div>
     `
@@ -49,19 +51,12 @@ class Home extends ViewTemp {
     this.setState("Home", 0);
     if (this.turn === true) {
       return /*html*/ `
-            <div class="flex justify-center cursor-pointer">
-              <div class="mt-16 flex justify-center  mx-10">
+            <div class="flex justify-center">
                 <div onclick="views[0].view.turn = false;router()" class="monitor_t 
-                  w-40 h-40 sm:-ml-20
-                  sm:w-60 sm:h-60
-                  flex flex-col justify-center items-center"
-                >見守り中</div>
-                <div class="w-40 h-40
-                  sm:w-60 sm:h-60 sm:-mr-20
-                  flex flex-col items-center content-center">
-                  <img src="./img/aibo.png" />
-                </div>    
-              </div>
+                mt-16 w-full h-auto wrapper block
+                w-60 h-60 content-center cursor-pointer	
+                flex flex-col justify-center items-center"
+                >見守り中</div>  
             </div>
             ${await this.getSummry()}`;
     } else {
@@ -69,7 +64,7 @@ class Home extends ViewTemp {
       <div class="flex justify-center">
         <div onclick="views[0].view.turn = true;router() "
         class="monitor_f mt-16 w-full h-auto wrapper block
-                w-48 h-48 content-center cursor-pointer	
+                w-60 h-60 content-center cursor-pointer	
                 flex flex-col justify-center items-center"
         >見守り対象外</div>
       </div>
