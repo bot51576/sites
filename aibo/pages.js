@@ -22,6 +22,9 @@ class Home extends ViewTemp {
   constructor(params) {
     super(params);
     this.turn = true;
+    this.notifiList = [
+      {id:0, title:"Title", date:"2022/01/01",text:""},
+    ]; 
   }
 
   async getSummry()  {
@@ -37,13 +40,15 @@ class Home extends ViewTemp {
             <p href="#notifi" class="whitespace-nowrap -ml-3">通知</p>
           <a href="#notifi"><ion-icon class="arrow ml-64 mr-4" name="chevron-forward-outline"></ion-icon></a>
       </div>
-      <div class="flex justify-center items-center w-full mx-auto mt-12">
-        <div class="flex justify-between rounded-lg bg-blue-200"> 
-          <div class="p-3">通知内容</div>
-          <div class="ml-64">見る</div>
+      <div class="flex justify-center items-center mx-auto mt-7">
+        <div class="flex mx-3 -m-4 rounded-lg bg-blue-50 flex flex-wrap -m-4"> 
+            <div class="w-fit md:w-1/2 p-2">
+                <h2 class="text-lg text-gray-900 font-medium">通知タイトル</h2>
+                <p class="text-sm text-gray-400">2022/1/01</p>
+                <p class="text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+            </div>
         </div>
       </div>
-    </div>
     `
   }
 
