@@ -27,4 +27,7 @@
   }
 }
 
-
+.selected {
+  border-width: 2px;
+  border-color: rgb(217 119 6);
+}

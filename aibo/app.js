@@ -19,3 +19,8 @@ const router = async () => {
 };
 
 window.addEventListener("hashchange", router, false);
+/*
+setInterval(() => {
+  router();
+}, 10000);
+*/
