@@ -1,0 +1,85 @@
+.atom,
+.core,
+.core::before,
+.core::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atom {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  margin-right: auto;
+  margin-left: auto;
+}
+.core,
+.core::before,
+.core::after {
+  position: absolute;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: 4s linear infinite;
+}
+.core {
+  width: 50%;
+  height: 50%;
+  animation-name: rotate3DZ;
+}
+.core::before,
+.core::after {
+  width: 200%;
+  height: 200%;
+  content: "";
+  border: 3px solid #005792;
+  box-shadow: 0 0 3px 3px #d9faff, 0 0 3px 3px #d9faff inset;
+}
+.core:first-child {
+  background: radial-gradient(
+    circle at 25% 25%,
+    #d9faff -75%,
+    #00bbf0,
+    #00204a 75%
+  );
+}
+.core:first-child::before {
+  animation-name: rotate3DX;
+}
+.core:first-child::after {
+  animation-name: rotate3DY;
+}
+.core:last-child {
+  box-shadow: 0 0 75px 3px #d9faff;
+}
+.core:last-child::before {
+  animation-name: rotate3DXY;
+}
+.core:last-child::after {
+  animation-name: rotate3DYX;
+}
+@keyframes rotate3DX {
+  to {
+    transform: rotate3d(-1, 0, 0, 360deg);
+  }
+}
+@keyframes rotate3DY {
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes rotate3DZ {
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@keyframes rotate3DXY {
+  to {
+    transform: rotate3d(1, -1, 0, 360deg);
+  }
+}
+@keyframes rotate3DYX {
+  to {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
