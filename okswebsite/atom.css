@@ -83,3 +83,69 @@
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
+
+/* Slide show */
+.slowFade {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 25vh;
+  position: relative;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .slowFade {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* 960px以上に適用されるCSS（PC用） */
+  .slowFade {
+    height: 100vh;
+  }
+}
+
+.slowFade .slide img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.5) rotate(15deg);
+  -webkit-animation: slowFade 32s infinite;
+  animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+  -webkit-animation-delay: 24s;
+  animation-delay: 24s;
+}
+@keyframes slowFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slowFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
