@@ -1,0 +1,169 @@
+.atom,
+.core,
+.core::before,
+.core::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atom {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  margin-right: auto;
+  margin-left: auto;
+}
+.core,
+.core::before,
+.core::after {
+  position: absolute;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: 4s linear infinite;
+}
+.core {
+  width: 50%;
+  height: 50%;
+  animation-name: rotate3DZ;
+}
+.core::before,
+.core::after {
+  width: 200%;
+  height: 200%;
+  content: "";
+  border: 3px solid #005792;
+  box-shadow: 0 0 3px 3px #d9faff, 0 0 3px 3px #d9faff inset;
+}
+.core:first-child {
+  background: radial-gradient(
+    circle at 25% 25%,
+    #d9faff -75%,
+    #00bbf0,
+    #00204a 75%
+  );
+}
+.core:first-child::before {
+  animation-name: rotate3DX;
+}
+.core:first-child::after {
+  animation-name: rotate3DY;
+}
+.core:last-child {
+  box-shadow: 0 0 75px 3px #d9faff;
+}
+.core:last-child::before {
+  animation-name: rotate3DXY;
+}
+.core:last-child::after {
+  animation-name: rotate3DYX;
+}
+@keyframes rotate3DX {
+  to {
+    transform: rotate3d(-1, 0, 0, 360deg);
+  }
+}
+@keyframes rotate3DY {
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes rotate3DZ {
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@keyframes rotate3DXY {
+  to {
+    transform: rotate3d(1, -1, 0, 360deg);
+  }
+}
+@keyframes rotate3DYX {
+  to {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+/* Slide show */
+.slowFade {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 25vh;
+  position: relative;
+}
+.slide {
+  height: 25vh;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .slowFade {
+    height: 40vh;
+  }
+  .slides {
+    height: 40vh;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* 960px以上に適用されるCSS（PC用） */
+  .slowFade {
+    height: 100vh;
+  }
+  .slides {
+    height: 100vh;
+  }
+}
+
+.slowFade .slide img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.5) rotate(15deg);
+  -webkit-animation: slowFade 32s infinite;
+  animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+  -webkit-animation-delay: 24s;
+  animation-delay: 24s;
+}
+@keyframes slowFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slowFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+.title-gradient {
+  display: inline-block;
+  background: -webkit-linear-gradient(180deg, #5576f9, #00e0fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* 未対応ブラウザのために一応テキスト色を指定しておく */
+  color: blue;
+}
